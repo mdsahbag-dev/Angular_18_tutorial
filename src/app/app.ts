@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLinkWithHref, RouterLink } from '@angular/router';
 import { DataBinding } from './components/data-binding/data-binding';
 import { StructuralDirective } from "./components/structural-directive/structural-directive";
 import { EmployeeList } from "./components/employee-list/employee-list";
@@ -8,7 +8,7 @@ import { AttributeDirective } from "./components/attribute-directive/attribute-d
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, DataBinding, StructuralDirective, EmployeeList, AddEmployee, AttributeDirective],
+  imports: [RouterOutlet,RouterLink],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

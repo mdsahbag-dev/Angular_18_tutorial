@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterLinkActive } from "@angular/router";
+import { Router, RouterLinkActive } from "@angular/router";
 
 @Component({
   selector: 'app-structural-directive',
@@ -29,6 +29,13 @@ export class StructuralDirective {
 
    ]
 
+   constructor(private router: Router){
+
+   }
+
+    navigateToAttribute(){
+      this.router.navigateByUrl("attribute-dir")
+  }
 
    showDiv1(){
     this.isDiv1Visible = true;
@@ -43,6 +50,5 @@ export class StructuralDirective {
   checkBoxShow(){
     this.isActive = !this.isActive
   }
-
 
 }
