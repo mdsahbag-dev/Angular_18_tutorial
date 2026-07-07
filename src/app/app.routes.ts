@@ -7,6 +7,9 @@ import { AttributeDirective } from './components/attribute-directive/attribute-d
 import { Ifelse } from './components/controlFlow/ifelse/ifelse';
 import { For } from './components/controlFlow/for/for';
 import { Switch } from './components/controlFlow/switch/switch';
+import { Pipe } from './components/pipe/pipe';
+import { Template } from './components/forms/template/template';
+import { ReactiveForm } from './components/forms/reactive-form/reactive-form';
 
 export const routes: Routes = [
     {
@@ -40,5 +43,17 @@ export const routes: Routes = [
       {
         path:'switch',
         component:Switch
+    },
+        {
+        path:'pipe',
+        component:Pipe
+    },
+   {
+        path:'template',
+        component:Template
+    },
+      {
+        path:'reactive',
+        component:ReactiveForm
     }
 ];

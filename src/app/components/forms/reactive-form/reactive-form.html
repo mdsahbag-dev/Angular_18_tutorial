@@ -1,0 +1,69 @@
+
+<div class="mt-2 mb-2 p-3 bg-secondary text-white rounded ">
+ <h1>Reactive Form</h1>
+ <span>Create Form & validation</span>
+</div>
+
+<div class="row">
+    <div class="col-8">
+   <form class="row g-3" [formGroup]="studentForm">
+
+    <div class="col-md-4 mb-3" >
+      <label for="validationCustom01">First name</label>
+      <input type="text" formControlName="firstName" name="firstName"  class="form-control" id="validationCustom01" placeholder="First name" required minlength="3">
+    </div>
+    <div class="col-md-4 mb-3"> 
+      <label for="validationCustom02">Last name</label>
+      <input type="text"  formControlName="lastName" name="lastName"  class="form-control" id="validationCustom02" placeholder="Last name"  required>
+     
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationCustomUsername">Username</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend">@</span>
+        </div>
+        <input type="text"  formControlName="username"  name="username"  class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+    
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom03">City</label>
+      <input type="text"  formControlName="city"  name="city"  class="form-control" id="validationCustom03" placeholder="City" required>
+ 
+    </div>
+  <div class="form-group col-md-3">
+      <label for="inputState">State</label>
+      <select id="inputState"formControlName="state"  name="state" class="form-control">
+        <option selected value="">Choose...</option>
+        <option>Maharastra</option>
+        <option>Goa</option>
+        <option>Uttar pradesh</option>
+      </select>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationCustom05">Zip</label>
+      <input type="text" formControlName="zipCode" name="zipCode" class="form-control" id="validationCustom05" placeholder="Zip" required>
+  
+    </div>
+      <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" formControlName="isAcceptTerms" name="isAcceptTerms"  type="checkbox" id="gridCheck" required>
+      <label class="form-check-label" for="gridCheck">
+        Agree to terms and conditions 
+      </label>
+    </div>
+  </div>
+        <div class="col-md-4 mb-3">
+             <button class="btn btn-secondary mx-2" type="button">Reset Form</button>
+     <button class="btn btn-primary"  type="button" (click)="onSave()" >Submit form</button>
+    </div>
+ 
+</form>
+     <div class="col-4">
+        {{formValue | json}}
+     </div>
+    </div>
+
+ 
+</div>
