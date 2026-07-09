@@ -10,6 +10,7 @@ import { Switch } from './components/controlFlow/switch/switch';
 import { Pipe } from './components/pipe/pipe';
 import { Template } from './components/forms/template/template';
 import { ReactiveForm } from './components/forms/reactive-form/reactive-form';
+import { GetApi } from './components/apiIntegration/get-api/get-api';
 
 export const routes: Routes = [
     {
@@ -55,5 +56,9 @@ export const routes: Routes = [
       {
         path:'reactive',
         component:ReactiveForm
+    },
+       {
+        path:'get-api',
+        component:GetApi
     }
 ];

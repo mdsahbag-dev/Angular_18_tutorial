@@ -11,6 +11,14 @@
     <div class="col-md-4 mb-3" >
       <label for="validationCustom01">First name</label>
       <input type="text" formControlName="firstName" name="firstName"  class="form-control" id="validationCustom01" placeholder="First name" required minlength="3">
+      <div class="text-danger">
+        @if( studentForm.controls['firstName'].touched &&   studentForm.controls['firstName'].errors?.['required']){
+            <span>This is required</span>
+        }@else if (studentForm.controls['firstName'].touched && studentForm.controls['firstName'].errors?.['minlength']) {
+            <span>Min 4 char required</span>
+        }
+       
+      </div>
     </div>
     <div class="col-md-4 mb-3"> 
       <label for="validationCustom02">Last name</label>
@@ -26,6 +34,9 @@
         <input type="text"  formControlName="username"  name="username"  class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
     
       </div>
+          @if( studentForm.controls['username'].errors?.['email']){
+            <span class="text-danger">Please enter valid email</span>
+        }
     </div>
     <div class="col-md-6 mb-3">
       <label for="validationCustom03">City</label>
