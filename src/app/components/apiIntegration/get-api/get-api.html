@@ -1,5 +1,8 @@
-<div class="row">
-    <div class="col-2">
+<app-alert [alertType]="'warning'" [message]="'This is Get API page...'"></app-alert>
+<app-my-button (onBtnClick)="getData($event)" [btnClass]="'btn btn-info'" [btnText]="'Save record'"></app-my-button>
+
+<div class="row mt-4">
+    <div class="col-2">     
         <button class="btn btn-success" (click)="getAllUser()">Get Users</button>
     </div>
     <div class="col-3">

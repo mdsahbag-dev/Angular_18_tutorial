@@ -1,9 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Alert } from "../../../reusableComponent/alert/alert";
+import { MyButton } from '../../../reusableComponent/my-button/my-button';
 
 @Component({
   selector: 'app-get-api',
-  imports: [],
+  imports: [Alert,MyButton],
   templateUrl: './get-api.html',
   styleUrl: './get-api.css',
 })
@@ -24,6 +26,10 @@ export class GetApi {
       debugger;
        console.log("Something went wrong!");
     })
+  }
+
+  getData(data: any){
+    debugger;
   }
 }
  

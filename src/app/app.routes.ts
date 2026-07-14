@@ -11,6 +11,8 @@ import { Pipe } from './components/pipe/pipe';
 import { Template } from './components/forms/template/template';
 import { ReactiveForm } from './components/forms/reactive-form/reactive-form';
 import { GetApi } from './components/apiIntegration/get-api/get-api';
+import { PostApi } from './components/apiIntegration/post-api/post-api';
+import { LifecycleEvent } from './components/lifecycle-event/lifecycle-event';
 
 export const routes: Routes = [
     {
@@ -60,5 +62,13 @@ export const routes: Routes = [
        {
         path:'get-api',
         component:GetApi
+    },
+    {
+        path:'post-api',
+        component:PostApi
+    },
+    {
+        path:'life-cycle-event',
+        component:LifecycleEvent
     }
 ];
